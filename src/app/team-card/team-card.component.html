@@ -1,0 +1,12 @@
+<div class="team-card">
+    <div class="team-card__image">
+        <img [src]="img" alt="" srcset="">
+    </div>
+    <div class="team-card__content">
+        <div class="team-card__title">{{title}}</div>
+        <div class="team-card__description">
+           <p>{{description}}</p> 
+        </div>
+        <div class="team-card__footer" (click)="emitViewMore()">View more</div>
+    </div>
+</div>
