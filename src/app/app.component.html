@@ -1,8 +1,6 @@
 <div class="container">
-  <div class="card">
-    <ng-container *ngIf="equipo$ | async as equipo">
-      <app-team-card [title]="equipo.strTeam" [img]="equipo.strTeamLogo" [description]="equipo.strDescriptionEN"></app-team-card>
-    </ng-container>
+  <div class="card" *ngFor="let team of teams">
+      <app-team-card [title]="team.strTeam" [imgBadge]="team.strTeamBadge" [imgShirt]="team.strTeamJersey" [description]="team.strDescriptionEN"></app-team-card>
   </div>
 </div>
 

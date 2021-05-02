@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { map, tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-
-  constructor(private http: HttpClient) { }
+  private _url: string = 'https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=';
   private teamsId : { [key: string]: number } = {
     '9Octubre': 140793,
     'BarcelonaSc': 138159,
     'cdOlmedo':138230,
-    'chacaritas': 141120,
     'csdMacara':138228,
     'delfinSc':138220,
     'deportivoCuenca':138221,
@@ -29,12 +27,17 @@ export class ApiService {
     'universidadCatolica':138233
 
   }
-  getTeamById(): Observable<any> {
-      for(const team in this.teamsId){
-        return this.http.get(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${team}`);
-      } 
-      return new Observable;
+  private list : Array<Observable<any>> = [];
+  constructor(private http: HttpClient) { }
+  getTeamById(teamId:number): Observable<any>{
+    return this.http.get(this._url+teamId);
+  }
+  listOfTeams(): Array<Observable<any>>{
+    for(const team in this.teamsId){
+      this.getTeamById(this.teamsId[team]).subscribe((resp:any)=>{
+        this.list.push(resp.teams[0]);
+      });
+    }
+    return this.list;
   }
 }
-
-type IdTeam = string;

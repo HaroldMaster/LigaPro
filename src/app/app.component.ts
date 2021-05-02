@@ -10,15 +10,15 @@ import { ApiService } from './core/services/api.service';
 })
 export class AppComponent {
   title = 'LigaPro';
-  equipo$: Observable<{
+  public teams :  any;
+  /*equipo$: Observable<{
     strTeam: string;
     strTeamLogo: string;
     strDescriptionEN: string;
-  }>;
+  }>;*/
   constructor(apiService: ApiService) {
-    this.equipo$ = apiService.getTeamById('133604').pipe(
-      tap((teams) => console.log(teams)),
-      map((result) => result.teams[0])
-    );
+    this.teams = apiService.listOfTeams();
+    console.log(this.teams)
   }
 }
+

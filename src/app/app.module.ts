@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ApiService } from './core/services/api.service';
 import { TeamCardComponent } from './team-card/team-card.component';
 
 @NgModule({
@@ -16,7 +17,7 @@ import { TeamCardComponent } from './team-card/team-card.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

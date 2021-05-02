@@ -10,7 +10,8 @@ export class TeamCardComponent implements OnInit {
 
   @Input() title = '4,790,000 kr';
   @Input() description = 'Great detached house with very good rental income. Large, sunny property of 2461m². Attractive location in Bergen West!';
-  @Input() img = '';
+  @Input() imgBadge = '';
+  @Input() imgShirt = '';
   
 
   @Output() viewMore: EventEmitter<void> =  new EventEmitter();
