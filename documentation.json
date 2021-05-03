@@ -497,7 +497,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"./../../styles/abstract/variables\";\r\n\r\n.team-card {\r\n  width: 43.4rem;\r\n  height: 65rem;\r\n  background-color: $color-white;\r\n  border-radius: 0.7rem 0.7rem 0 0;\r\n  box-shadow: 0px 4px 20px 10px $color-shadow;\r\n\r\n  &__image {\r\n    height: 29.2rem;\r\n    img {\r\n      width: 100%;\r\n      height: 100%;\r\n      object-fit: contain;\r\n    }\r\n  }\r\n\r\n  &__content {\r\n    padding: 5.5rem;\r\n  }\r\n\r\n  &__title {\r\n    //margin-top: 5.5rem;\r\n    font-size: 3.6rem;\r\n    line-height: 4.5rem;\r\n    font-style: normal;\r\n    font-weight: bold;\r\n  }\r\n\r\n  &__description {\r\n    margin-top: 1.1rem;\r\n    font-size: 2.3rem;\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    line-height: 2.3rem;\r\n    letter-spacing: 0rem;\r\n    text-align: left;\r\n\r\n    & > p {\r\n      display: -webkit-box;\r\n      max-width: 40rem;\r\n      //margin: 0 auto;\r\n      -webkit-line-clamp: 4;\r\n      -webkit-box-orient: vertical;\r\n      overflow: hidden;\r\n      text-overflow: ellipsis;\r\n    }\r\n  }\r\n  &__footer {\r\n    margin-top: 2rem;\r\n    font-family: Mulish;\r\n    font-size: 1.4rem;\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    line-height: 19px;\r\n    letter-spacing: 0em;\r\n    text-align: left;\r\n  }\r\n}\r\n\r\n.popup {\r\n  position: fixed;\r\n  top: 0;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n  background: rgba(0, 0, 0, 0.7);\r\n  transition: opacity 500ms;\r\n  visibility: hidden;\r\n  opacity: 0;\r\n  overflow: scroll;\r\n  &:target {\r\n    visibility: visible;\r\n    opacity: 1;\r\n  }\r\n  &__container {\r\n    margin: 70px auto;\r\n    padding: 20px;\r\n    background: #fff;\r\n    border-radius: 5px;\r\n    width: 70%;\r\n    position: relative;\r\n  }\r\n  &__title {\r\n    margin-top: 0;\r\n    color: #333;\r\n    font-family: Tahoma, Arial, sans-serif;\r\n    font-size: 20px;\r\n  }\r\n  &__close {\r\n    position: absolute;\r\n    top: 10px;\r\n    right: 20px;\r\n    transition: all 200ms;\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n    text-decoration: none;\r\n    color: #333;\r\n  }\r\n  &__content {\r\n    max-height: 30%;\r\n    overflow: auto;\r\n    font-size: 15px;\r\n  }\r\n  &__image {\r\n    display: flex;\r\n    margin-top: 30px;\r\n    align-items: center;\r\n    justify-content: center;\r\n    &__shirt {\r\n      max-height: 20rem;\r\n      max-width: 20rem;\r\n    }\r\n  }\r\n}\r\n",
+                    "data": "@import \"./../../styles/abstract/variables\";\r\n\r\n.team-card {\r\n  width: 43.4rem;\r\n  height: 65rem;\r\n  background-color: $color-white;\r\n  border-radius: 0.7rem 0.7rem 0 0;\r\n  box-shadow: 0px 4px 20px 10px $color-shadow;\r\n\r\n  &__image {\r\n    height: 29.2rem;\r\n    img {\r\n      width: 100%;\r\n      height: 100%;\r\n      object-fit: contain;\r\n    }\r\n  }\r\n\r\n  &__content {\r\n    padding: 5.5rem;\r\n  }\r\n\r\n  &__title {\r\n    //margin-top: 5.5rem;\r\n    font-size: 3.6rem;\r\n    line-height: 4.5rem;\r\n    font-style: normal;\r\n    font-weight: bold;\r\n  }\r\n\r\n  &__description {\r\n    margin-top: 1.1rem;\r\n    font-size: 2.3rem;\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    line-height: 2.3rem;\r\n    letter-spacing: 0rem;\r\n    text-align: left;\r\n\r\n    & > p {\r\n      display: -webkit-box;\r\n      max-width: 40rem;\r\n      height: 9.2rem;\r\n      //margin: 0 auto;\r\n      -webkit-line-clamp: 4;\r\n      -webkit-box-orient: vertical;\r\n      overflow: hidden;\r\n      text-overflow: ellipsis;\r\n    }\r\n  }\r\n  &__footer {\r\n    margin-top: 2rem;\r\n    font-family: Mulish;\r\n    font-size: 1.4rem;\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    line-height: 19px;\r\n    letter-spacing: 0em;\r\n    text-align: left;\r\n  }\r\n}\r\n\r\n.popup {\r\n  position: fixed;\r\n  top: 0;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n  background: rgba(0, 0, 0, 0.7);\r\n  transition: opacity 500ms;\r\n  visibility: hidden;\r\n  opacity: 0;\r\n  overflow: scroll;\r\n  &:target {\r\n    visibility: visible;\r\n    opacity: 1;\r\n  }\r\n  &__container {\r\n    margin: 70px auto;\r\n    padding: 20px;\r\n    background: #fff;\r\n    border-radius: 5px;\r\n    width: 70%;\r\n    position: relative;\r\n  }\r\n  &__title {\r\n    margin-top: 0;\r\n    color: #333;\r\n    font-family: Tahoma, Arial, sans-serif;\r\n    font-size: 20px;\r\n  }\r\n  &__close {\r\n    position: absolute;\r\n    top: 10px;\r\n    right: 20px;\r\n    transition: all 200ms;\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n    text-decoration: none;\r\n    color: #333;\r\n  }\r\n  &__content {\r\n    max-height: 30%;\r\n    overflow: auto;\r\n    font-size: 15px;\r\n  }\r\n  &__image {\r\n    display: flex;\r\n    margin-top: 30px;\r\n    align-items: center;\r\n    justify-content: center;\r\n    &__shirt {\r\n      max-height: 20rem;\r\n      max-width: 20rem;\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./team-card.component.scss"
                 }
             ],
@@ -657,7 +657,7 @@
                 "subtype": "variable",
                 "file": "src/app/team-card/team-card.stories.ts",
                 "type": "",
-                "defaultValue": "() => ({\r\n      component: TeamCardComponent,\r\n      props: {\r\n\r\n      },\r\n})"
+                "defaultValue": "() => ({\r\n      component: TeamCardComponent,\r\n      props: {\r\n        title : 'LDU Quito',\r\n        description : 'Liga Deportiva Universitaria, often referred to as Liga de Quito, LDU, is an Ecuadorian professional football club based in Quito. They play in the Serie A, the highest level of the Ecuadorian professional football league. They play their home games at the Estadio Rodrigo Paz Delgado, more commonly referred to as Casa Blanca. Rival clubs include Quito-based clubs El Nacional, Deportivo Quito, Aucas and Universidad Católica. Liga Deportiva',\r\n        imgBadge : 'https://www.thesportsdb.com/images/media/team/badge/u9r71n1579959729.png',\r\n        imgShirt : 'https://www.thesportsdb.com/images/media/team/jersey/ywbpjo1616240161.png'\r\n      },\r\n})"
             },
             {
                 "name": "Primary",
@@ -695,17 +695,17 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+                "file": "src/stories/Button.stories.ts",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                "file": "src/stories/Header.stories.ts",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -841,7 +841,7 @@
                     "subtype": "variable",
                     "file": "src/app/team-card/team-card.stories.ts",
                     "type": "",
-                    "defaultValue": "() => ({\r\n      component: TeamCardComponent,\r\n      props: {\r\n\r\n      },\r\n})"
+                    "defaultValue": "() => ({\r\n      component: TeamCardComponent,\r\n      props: {\r\n        title : 'LDU Quito',\r\n        description : 'Liga Deportiva Universitaria, often referred to as Liga de Quito, LDU, is an Ecuadorian professional football club based in Quito. They play in the Serie A, the highest level of the Ecuadorian professional football league. They play their home games at the Estadio Rodrigo Paz Delgado, more commonly referred to as Casa Blanca. Rival clubs include Quito-based clubs El Nacional, Deportivo Quito, Aucas and Universidad Católica. Liga Deportiva',\r\n        imgBadge : 'https://www.thesportsdb.com/images/media/team/badge/u9r71n1579959729.png',\r\n        imgShirt : 'https://www.thesportsdb.com/images/media/team/jersey/ywbpjo1616240161.png'\r\n      },\r\n})"
                 }
             ],
             "src/app/team-card/team-card.selectors.ts": [
