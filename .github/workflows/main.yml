@@ -30,9 +30,6 @@ jobs:
       - name: Install npm packages
         run: npm install
         
-      - name: Test project
-        run: npm run test
-        
       - name: Bluid project
         run: npm run build
         
