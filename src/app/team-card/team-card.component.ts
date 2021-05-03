@@ -13,7 +13,7 @@ export class TeamCardComponent implements OnInit {
   @Input() imgBadge = '';
   @Input() imgShirt = '';
   @Output() viewMore: EventEmitter<void> =  new EventEmitter();
-
+ 
   constructor() { }
 
   ngOnInit(): void {
