@@ -1,27 +1,27 @@
-<div class="team-card" id="{{title}}" >
-    <div class="team-card__image">
-        <img [src]="imgBadge" alt="" srcset="">
+<div class="team-card" id="{{ title }}">
+  <div class="team-card__image">
+    <img [src]="imgBadge" alt="" srcset="" />
+  </div>
+  <div class="team-card__content">
+    <div class="team-card__title">{{ title }}</div>
+    <div class="team-card__description">
+      <p>{{ description }}</p>
     </div>
-    <div class="team-card__content">
-        <div class="team-card__title">{{title}}</div>
-        <div class="team-card__description">
-           <p>{{description}}</p> 
-        </div>
-        <div class="team-card__footer" (click)="emitViewMore()">
-            <a class="about-me"  href="#popup{{title}}">View more</a> 
-        </div>
+    <div class="team-card__footer" [attr.data-test-id]="'team-card-footer-'+title" (click)="emitViewMore()">
+      <a class="about-me" [attr.data-test-id]="'team-card-popup-'+title" href="#popup{{ title }}">View more</a>
     </div>
+  </div>
 </div>
 
-<div id="popup{{title}}" class="overlay">
-    <div class="popup">
-      <h2 class="meet-me">{{title}}</h2>
-      <a class="close" href="/#{{title}}">&times;</a>
-      <div class="content">
-          {{description}}
-        <div class="image-popup-container">
-          <img class="image-popup" [src]="imgShirt" alt="" srcset="">
-        </div>
+<div id="popup{{ title }}" class="popup">
+  <div class="popup__container">
+    <h2 class="popup__title">{{ title }}</h2>
+    <a class="popup__close" href="/#{{ title }}">&times;</a>
+    <div class="popup__content">
+      {{ description }}
+      <div class="popup__image">
+        <img class="popup__image__shirt" [src]="imgShirt" alt="" srcset="" />
       </div>
     </div>
   </div>
+</div>

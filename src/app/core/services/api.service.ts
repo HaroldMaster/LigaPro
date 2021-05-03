@@ -25,16 +25,18 @@ export class ApiService {
     'sdAcuas':138219,
     'tecnicoUniversitario':138232,
     'universidadCatolica':138233
-
   }
   private list : Array<Observable<any>> = [];
   constructor(private http: HttpClient) { }
   getTeamById(teamId:number): Observable<any>{
+    console.log(this._url+teamId)
     return this.http.get(this._url+teamId);
   }
   listOfTeams(): Array<Observable<any>>{
     for(const team in this.teamsId){
+      console.log(this.teamsId); //?
       this.getTeamById(this.teamsId[team]).subscribe((resp:any)=>{
+        console.log(resp); //?
         this.list.push(resp.teams[0]);
       });
     }

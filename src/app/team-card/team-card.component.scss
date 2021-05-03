@@ -7,7 +7,6 @@
   border-radius: 0.7rem 0.7rem 0 0;
   box-shadow: 0px 4px 20px 10px $color-shadow;
 
-
   &__image {
     height: 29.2rem;
     img {
@@ -37,8 +36,8 @@
     line-height: 2.3rem;
     letter-spacing: 0rem;
     text-align: left;
-    
-     & > p{
+
+    & > p {
       display: -webkit-box;
       max-width: 40rem;
       //margin: 0 auto;
@@ -46,12 +45,11 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
-     }
-   
+    }
   }
   &__footer {
     margin-top: 2rem;
-    font-family:Mulish;
+    font-family: Mulish;
     font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
@@ -61,8 +59,7 @@
   }
 }
 
-
-.overlay {
+.popup {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -73,53 +70,47 @@
   visibility: hidden;
   opacity: 0;
   overflow: scroll;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 70%;
-  position: relative;
-
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-  font-size: 20px;
-}
-.popup .close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  transition: all 200ms;
-  font-size: 2rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #0b6096;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-  font-size: 15px;
-}
-
-.image-popup-container{
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  &__container {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 70%;
+    position: relative;
+  }
+  &__title {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 20px;
+  }
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: all 200ms;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  &__content {
+    max-height: 30%;
+    overflow: auto;
+    font-size: 15px;
+  }
+  &__image {
     display: flex;
     margin-top: 30px;
     align-items: center;
     justify-content: center;
-}
-.image-popup{
-    max-height: 20rem;
-    max-width: 20rem;
+    &__shirt {
+      max-height: 20rem;
+      max-width: 20rem;
+    }
+  }
 }

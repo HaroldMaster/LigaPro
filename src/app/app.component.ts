@@ -18,7 +18,6 @@ export class AppComponent {
   }>;*/
   constructor(apiService: ApiService) {
     this.teams = apiService.listOfTeams();
-    console.log(this.teams)
   }
 }
 
